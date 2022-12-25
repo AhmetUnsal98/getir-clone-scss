@@ -1,0 +1,97 @@
+@import "../../global.scss";
+$marginLeftTop: (60vh - 52vh) / 2;
+$marginRightTop: (60vh - 20vh) / 2;
+.jumbotron {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+}
+.jumbotron-slider {
+    height: 70vh;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 0.5s ease-out;
+}
+.jumbotron-inner-container {
+    height: 100%;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.jumbotron-inner-left-container {
+    position: absolute;
+    top: $marginLeftTop;
+    left: 10vw;
+    top: 12vh;
+    width: 20vw;
+    height: 42vh;
+    h1 {
+        color: white;
+        letter-spacing: 1px;
+        font-size: 34px;
+    }
+    img {
+        height: 50%;
+    }
+}
+.jumbotron-inner-right-container {
+    position: absolute;
+    top: $marginRightTop;
+    right: 12vw;
+    width: 24vw;
+    height: 26vh;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    p {
+        color: $navbar-color;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    div {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .jumbotron-input-flag {
+        width: 25%;
+        height: 52px;
+        border-radius: 6px;
+        border: 2px solid lightgray;
+        color: $navbar-color;
+    }
+    .jumbotron-input-number {
+        width: 75%;
+        height: 48px;
+        margin-left: 8px;
+        border-radius: 6px;
+        padding-left: 12px;
+        font-size: 14px;
+        color: lightgray;
+        border: 2px solid lightgray;
+    }
+    button {
+        width: 90%;
+        height: 48px;
+        background-color: #ffd300;
+        margin-top: 6px;
+        border: 0px;
+        border-radius: 8px;
+        color: $navbar-color;
+        font-size: 15px;
+        cursor: pointer;
+        &:hover {
+            color: #ffd300;
+            background-color: $navbar-color;
+            transition: 0.2s ease-in;
+        }
+    }
+}

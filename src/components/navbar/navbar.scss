@@ -1,0 +1,100 @@
+@import "../../global.scss";
+
+.navbar {
+    height: 45px;
+    width: 100%;
+    background-color: $navbar-color;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .navbar-wrapper {
+        width: 85%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .navbar-left-container {
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
+            .navbar-item-hover-container {
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.2s ease;
+                cursor: pointer;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            .active {
+                height: 90%;
+                opacity: 1;
+                background-color: $hover-navbar-color;
+            }
+            .navbar-item {
+                padding: 0px 20px 0px 20px;
+                height: 100%;
+                margin: 2px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                p {
+                    font-size: 20px;
+                    z-index: 3;
+                    color: rgb(219, 219, 255);
+                    @include mobile {
+                        font-size: 17px;
+                    }
+                }
+
+                @include mobile {
+                    padding: 0px 5px 0px 5px;
+                }
+            }
+            .navbar-item:hover > .navbar-item-hover-container {
+                height: 90%;
+                opacity: 1;
+                background-color: $hover-navbar-color;
+            }
+        }
+        .navbar-right-container {
+            width: 65%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            cursor: pointer;
+            @include mobile {
+                display: none;
+            }
+
+            .navbar-item {
+                margin-left: 26px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+                span {
+                    align-items: center;
+                    margin-left: 6px;
+                    color: rgb(219, 219, 255);
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

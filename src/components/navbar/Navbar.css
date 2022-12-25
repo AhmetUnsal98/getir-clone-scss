@@ -1,0 +1,101 @@
+.navbar {
+  height: 45px;
+  width: 100%;
+  background-color: rgb(76, 51, 152);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .navbar-wrapper {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .navbar-wrapper .navbar-left-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .navbar-wrapper .navbar-left-container .navbar-item-hover-container {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.navbar .navbar-wrapper .navbar-left-container .active {
+  height: 90%;
+  opacity: 1;
+  background-color: rgb(93, 62, 188);
+}
+.navbar .navbar-wrapper .navbar-left-container .navbar-item {
+  padding: 0px 20px 0px 20px;
+  height: 100%;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.navbar .navbar-wrapper .navbar-left-container .navbar-item p {
+  font-size: 20px;
+  z-index: 3;
+  color: rgb(219, 219, 255);
+}
+@media (max-width: 767px) {
+  .navbar .navbar-wrapper .navbar-left-container .navbar-item p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .navbar-wrapper .navbar-left-container .navbar-item {
+    padding: 0px 5px 0px 5px;
+  }
+}
+.navbar .navbar-wrapper .navbar-left-container .navbar-item:hover > .navbar-item-hover-container {
+  height: 90%;
+  opacity: 1;
+  background-color: rgb(93, 62, 188);
+}
+.navbar .navbar-wrapper .navbar-right-container {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-wrapper .navbar-right-container {
+    display: none;
+  }
+}
+.navbar .navbar-wrapper .navbar-right-container .navbar-item {
+  margin-left: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.navbar .navbar-wrapper .navbar-right-container .navbar-item span {
+  align-items: center;
+  margin-left: 6px;
+  color: rgb(219, 219, 255);
+  font-size: 16px;
+}/*# sourceMappingURL=navbar.css.map */
