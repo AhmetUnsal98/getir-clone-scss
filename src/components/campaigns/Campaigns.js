@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../cards/Cards";
-import "./campaigns.css";
+import "./campaigns.scss";
 
 const Campaigns = () => {
   return (

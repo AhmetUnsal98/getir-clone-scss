@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Navbar.css";
+import "./navbar.scss";
 import { IoGlobeOutline } from "react-icons/io5";
 import { IoPerson } from "react-icons/io5";
 import { IoPersonAdd } from "react-icons/io5";

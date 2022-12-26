@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../categories/categories.css";
+import "../categories/categories.scss";
 import cat1 from "../../img/categories/cat1.jpeg";
 import cat2 from "../../img/categories/cat2.jpeg";
 const dummyData = [

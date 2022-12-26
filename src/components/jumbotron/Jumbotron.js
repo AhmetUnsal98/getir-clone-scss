@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./jumbotron.css";
+import "./jumbotron.scss";
 import image1 from "../../img/image1.jpg";
 import image2 from "../../img/image2.jpg";
 import image3 from "../../img/image3.jpg";
@@ -25,7 +25,7 @@ const Jumbotron = () => {
 
   const autoScroll = true;
   let slideInterval;
-  let intervalTime = 4000;
+  let intervalTime = 3000;
 
   const nextSlide = () => {
     setCurrentSlide(currentSlide === slideLength - 1 ? 0 : currentSlide + 1);
