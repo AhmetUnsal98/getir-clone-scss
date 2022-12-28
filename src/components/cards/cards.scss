@@ -7,12 +7,19 @@
     height: 52vh;
     margin-top: 1rem;
     background-color: rgb(250, 250, 250);
+    @include mobile {
+        height: auto;
+    }
 }
 .cards-container {
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: $inner-width;
     height: 100%;
+    @include mobile {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 .card {
     width: 32%;
@@ -22,7 +29,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    @include mobile {
+        width: 100%;
+        margin-top: 4px;
+    }
     border-radius: 6px;
     h6 {
         color: $navbar-color;

@@ -5,6 +5,10 @@ $marginRightTop: (60vh - 20vh) / 2;
     height: 70vh;
     width: 100vw;
     position: relative;
+    @include mobile {
+        height: auto;
+        width: 100%;
+    }
 }
 .jumbotron-slider {
     height: 70vh;
@@ -12,12 +16,18 @@ $marginRightTop: (60vh - 20vh) / 2;
     position: absolute;
     left: 0;
     transition: all 0.5s ease-out;
+    @include mobile {
+        display: none;
+    }
 }
 .jumbotron-inner-container {
     height: 100%;
     width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
+    @include mobile {
+        display: none;
+    }
 }
 .jumbotron-inner-left-container {
     position: absolute;
@@ -34,6 +44,9 @@ $marginRightTop: (60vh - 20vh) / 2;
     img {
         height: 50%;
     }
+    @include mobile {
+        display: none;
+    }
 }
 .jumbotron-inner-right-container {
     position: absolute;
@@ -47,7 +60,11 @@ $marginRightTop: (60vh - 20vh) / 2;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    @include mobile {
+        position: static;
+        width: 100%;
+        height: 24vh;
+    }
     p {
         color: $navbar-color;
         font-size: 16px;
@@ -88,10 +105,50 @@ $marginRightTop: (60vh - 20vh) / 2;
         color: $navbar-color;
         font-size: 15px;
         cursor: pointer;
+
         &:hover {
             color: #ffd300;
             background-color: $navbar-color;
             transition: 0.2s ease-in;
         }
+    }
+}
+@include mobile {
+}
+.jumbotron-mobile {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+
+    .jumbotron-mobile-header {
+        width: 100%;
+        background-color: $hover-navbar-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    h4 {
+        color: #ffd300;
+        font-size: 22px;
+    }
+    .jumbotron-mobile-address-container {
+        width: 100%;
+        height: 15%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .jumbotron-mobile-campaign {
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    @include mobile {
+        display: flex;
     }
 }
