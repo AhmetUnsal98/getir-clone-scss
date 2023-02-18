@@ -1,2 +1,2 @@
-Getir Clone with using css framework => scss
+Getir Clone 
 https://master--getir-clone-ahmet.netlify.app/
